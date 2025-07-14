@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>오늘의 운세</title>
+    <meta name="google-site-verification" content="abc123456789xyz" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #c3ecff, #f9f4ff);
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        input, button {
+            font-size: 1em;
+            padding: 10px;
+            margin: 10px;
+        }
+        .result {
+            margin-top: 30px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔮 오늘의 운세를 확인해보세요!</h1>
+    <input type="text" id="nameInput" placeholder="이름을 입력하세요" />
+    <button onclick="getFortune()">운세 보기</button>
+    <div class="result" id="fortuneResult"></div>
+
+    
+<!-- Google AdSense 광고 코드 예시 -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" crossorigin="anonymous"></script>
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+     data-ad-slot="1234567890"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+
+    <script>
+        const fortunes = [
+            "✨ 오늘은 운이 아주 좋습니다! 🍀",
+            "🌧️ 약간 조심해야 하는 하루예요.",
+            "🌈 기회가 찾아오고 있어요, 준비되셨나요?",
+            "🔥 열정 가득한 하루! 원하는 걸 이룰 수 있어요.",
+            "🌙 조용히 쉬어가는 하루도 나쁘지 않아요.",
+        ];
+
+        function getFortune() {
+            const name = document.getElementById("nameInput").value;
+            if (!name) {
+                alert("이름을 입력해주세요!");
+                return;
+            }
+            const result = fortunes[Math.floor(Math.random() * fortunes.length)];
+            document.getElementById("fortuneResult").innerText = name + "님의 운세는...\n" + result;
+        }
+    </script>
+</body>
+</html>
